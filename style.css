@@ -52,7 +52,7 @@ main a {
   color: var(--danger-color);
 }
 
-main > article, nav{
+main > article, nav {
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -62,7 +62,7 @@ nav {
   display: flex;
 }
 
-nav > a:not(:first-of-type){
+nav > a:not(:first-of-type) {
   margin-left: 24px;
 }
 
@@ -112,7 +112,7 @@ main article {
 
 main p {
   line-height: 1.75;
-  margin-bottom: 48px;;
+  margin-bottom: 48px;
 }
 
 main > article img {
@@ -130,4 +130,41 @@ footer {
   text-transform: uppercase;
   padding: 24px 0;
   color: var(--off-white);
+}
+
+/* MOBILE RESPONSIVE FIXES */
+@media (max-width: 500px) {
+
+  header a {
+    font-size: 1rem;
+  }
+
+  main article {
+    padding: 24px;
+  }
+
+  section.hero > .call-to-action {
+    font-size: 1.2rem;
+  }
+
+  main > article img {
+    float: none;
+    display: block;
+    margin: 0 auto 12px auto;
+  }
+
+  main > section,
+  main > article {
+    margin-bottom: 48px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav > a {
+    margin: 6px 0;
+    font-size: 1rem;
+  }
 }
